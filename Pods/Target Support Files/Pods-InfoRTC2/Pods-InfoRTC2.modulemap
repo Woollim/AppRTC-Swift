@@ -1,0 +1,6 @@
+framework module Pods_InfoRTC2 {
+  umbrella header "Pods-InfoRTC2-umbrella.h"
+
+  export *
+  module * { export * }
+}

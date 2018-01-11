@@ -1,0 +1,35 @@
+//
+//  Use this file to import your target's public headers that you would like to expose to Swift.
+//
+
+#import "RTCTypes.h"
+#import "RTCPeerConnectionFactory.h"
+#import "RTCEAGLVideoView.h"
+#import "RTCAudioSource.h"
+#import "RTCAudioTrack.h"
+#import "RTCAVFoundationVideoSource.h"
+#import "RTCEAGLVideoView.h"
+#import "RTCFileLogger.h"
+#import "RTCI420Frame.h"
+#import "RTCICECandidate.h"
+#import "RTCICEServer.h"
+#import "RTCLogging.h"
+#import "RTCMediaStream.h"
+#import "RTCMediaStreamTrack.h"
+#import "RTCMediaConstraints.h"
+#import "RTCOpenGLVideoRenderer.h"
+#import "RTCPair.h"
+#import "RTCDataChannel.h"
+#import "RTCPeerConnection.h"
+#import "RTCPeerConnectionDelegate.h"
+#import "RTCPeerConnectionFactory.h"
+#import "RTCSessionDescription.h"
+#import "RTCSessionDescription.h"
+#import "RTCSessionDescriptionDelegate.h"
+#import "RTCStatsDelegate.h"
+#import "RTCStatsReport.h"
+#import "RTCVideoCapturer.h"
+#import "RTCVideoSource.h"
+#import "RTCVideoTrack.h"
+
+

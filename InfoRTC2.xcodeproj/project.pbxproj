@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1E210718D0CBB42487AB8D /* Pods_InfoRTC2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6250C8E1C30DD615BC3AD00F /* Pods_InfoRTC2.framework */; };
+		D019B9D22004A576002852ED /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9D12004A576002852ED /* Base.swift */; };
+		D019B9D72004A695002852ED /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D019B9D62004A695002852ED /* Auth.storyboard */; };
+		D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DB2004ABE5002852ED /* AuthModel.swift */; };
+		D019B9DE2004AC4E002852ED /* IceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DD2004AC4E002852ED /* IceListModel.swift */; };
+		D019B9E02004AC9C002852ED /* SendMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DF2004AC9C002852ED /* SendMessageModel.swift */; };
+		D019B9E22004AD03002852ED /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E12004AD03002852ED /* SignInVC.swift */; };
+		D019B9E42004B1E0002852ED /* SetProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E32004B1E0002852ED /* SetProfileVC.swift */; };
+		D019B9E62004B290002852ED /* Connect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D019B9E52004B290002852ED /* Connect.storyboard */; };
+		D019B9E92004B2DA002852ED /* EnterPhoneNumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E82004B2DA002852ED /* EnterPhoneNumVC.swift */; };
+		D08D9F482004B3F8002B59F2 /* MainConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */; };
+		D09F09BE2005DF6000AA868A /* SDPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F09BD2005DF6000AA868A /* SDPModel.swift */; };
+		D0A1A66C2006F111007D8542 /* RTCManagerPeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1A66B2006F111007D8542 /* RTCManagerPeerDelegate.swift */; };
+		D0A1A68D200713FF007D8542 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1A68C200713FF007D8542 /* SocketManager.swift */; };
+		D0A1A6EF200749A4007D8542 /* IceCandidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1A6EE200749A4007D8542 /* IceCandidateModel.swift */; };
+		D0A8A6732005B38B00F8F9CF /* RTCManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8A6722005B38B00F8F9CF /* RTCManagerVC.swift */; };
 		D0E716762004A0A50095E020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E716752004A0A50095E020 /* AppDelegate.swift */; };
 		D0E716782004A0A50095E020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E716772004A0A50095E020 /* ViewController.swift */; };
 		D0E7167B2004A0A50095E020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E716792004A0A50095E020 /* Main.storyboard */; };
@@ -34,6 +50,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E75515C87312BE9860A61F0 /* Pods-InfoRTC2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfoRTC2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfoRTC2/Pods-InfoRTC2.release.xcconfig"; sourceTree = "<group>"; };
+		6250C8E1C30DD615BC3AD00F /* Pods_InfoRTC2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfoRTC2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D019B9D12004A576002852ED /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		D019B9D62004A695002852ED /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		D019B9DB2004ABE5002852ED /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		D019B9DD2004AC4E002852ED /* IceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceListModel.swift; sourceTree = "<group>"; };
+		D019B9DF2004AC9C002852ED /* SendMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageModel.swift; sourceTree = "<group>"; };
+		D019B9E12004AD03002852ED /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		D019B9E32004B1E0002852ED /* SetProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProfileVC.swift; sourceTree = "<group>"; };
+		D019B9E52004B290002852ED /* Connect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Connect.storyboard; sourceTree = "<group>"; };
+		D019B9E82004B2DA002852ED /* EnterPhoneNumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumVC.swift; sourceTree = "<group>"; };
+		D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConnectionVC.swift; sourceTree = "<group>"; };
+		D09F09BD2005DF6000AA868A /* SDPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPModel.swift; sourceTree = "<group>"; };
+		D09F09BF2005F0AB00AA868A /* InfoRTC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfoRTC-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0A1A66B2006F111007D8542 /* RTCManagerPeerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCManagerPeerDelegate.swift; sourceTree = "<group>"; };
+		D0A1A68C200713FF007D8542 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		D0A1A6EE200749A4007D8542 /* IceCandidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidateModel.swift; sourceTree = "<group>"; };
+		D0A8A6722005B38B00F8F9CF /* RTCManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCManagerVC.swift; sourceTree = "<group>"; };
 		D0E716722004A0A50095E020 /* InfoRTC2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoRTC2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E716752004A0A50095E020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E716772004A0A50095E020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +81,7 @@
 		D0E716912004A0A50095E020 /* InfoRTC2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfoRTC2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E716952004A0A50095E020 /* InfoRTC2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRTC2UITests.swift; sourceTree = "<group>"; };
 		D0E716972004A0A50095E020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D120FA7D053699B1327A012A /* Pods-InfoRTC2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfoRTC2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfoRTC2/Pods-InfoRTC2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1E210718D0CBB42487AB8D /* Pods_InfoRTC2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +110,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55DE09622305434F872AB818 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D120FA7D053699B1327A012A /* Pods-InfoRTC2.debug.xcconfig */,
+				2E75515C87312BE9860A61F0 /* Pods-InfoRTC2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFC8B0CC028F8699CE0FD36E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6250C8E1C30DD615BC3AD00F /* Pods_InfoRTC2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D019B9D02004A569002852ED /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D019B9D12004A576002852ED /* Base.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D019B9D32004A673002852ED /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				D019B9D62004A695002852ED /* Auth.storyboard */,
+				D019B9E52004B290002852ED /* Connect.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		D019B9D42004A67C002852ED /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D019B9E72004B2C3002852ED /* Connection */,
+				D019B9D52004A689002852ED /* Auth */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D019B9D52004A689002852ED /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D019B9E12004AD03002852ED /* SignInVC.swift */,
+				D019B9E32004B1E0002852ED /* SetProfileVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D019B9D82004A99B002852ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D019B9DB2004ABE5002852ED /* AuthModel.swift */,
+				D019B9DD2004AC4E002852ED /* IceListModel.swift */,
+				D019B9DF2004AC9C002852ED /* SendMessageModel.swift */,
+				D09F09BD2005DF6000AA868A /* SDPModel.swift */,
+				D0A1A6EE200749A4007D8542 /* IceCandidateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D019B9E72004B2C3002852ED /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				D019B9E82004B2DA002852ED /* EnterPhoneNumVC.swift */,
+				D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		D0A8A6742005BD8000F8F9CF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D0A8A6722005B38B00F8F9CF /* RTCManagerVC.swift */,
+				D0A1A66B2006F111007D8542 /* RTCManagerPeerDelegate.swift */,
+				D0A1A68C200713FF007D8542 /* SocketManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		D0E716692004A0A50095E020 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +200,8 @@
 				D0E716892004A0A50095E020 /* InfoRTC2Tests */,
 				D0E716942004A0A50095E020 /* InfoRTC2UITests */,
 				D0E716732004A0A50095E020 /* Products */,
+				55DE09622305434F872AB818 /* Pods */,
+				AFC8B0CC028F8699CE0FD36E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +218,12 @@
 		D0E716742004A0A50095E020 /* InfoRTC2 */ = {
 			isa = PBXGroup;
 			children = (
+				D09F09BF2005F0AB00AA868A /* InfoRTC-Bridging-Header.h */,
+				D0A8A6742005BD8000F8F9CF /* Core */,
+				D019B9D82004A99B002852ED /* Model */,
+				D019B9D42004A67C002852ED /* VC */,
+				D019B9D32004A673002852ED /* StoryBoard */,
+				D019B9D02004A569002852ED /* Base */,
 				D0E716752004A0A50095E020 /* AppDelegate.swift */,
 				D0E716772004A0A50095E020 /* ViewController.swift */,
 				D0E716792004A0A50095E020 /* Main.storyboard */,
@@ -132,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0E7169A2004A0A50095E020 /* Build configuration list for PBXNativeTarget "InfoRTC2" */;
 			buildPhases = (
+				E211162A60D0340E810C41A5 /* [CP] Check Pods Manifest.lock */,
 				D0E7166E2004A0A50095E020 /* Sources */,
 				D0E7166F2004A0A50095E020 /* Frameworks */,
 				D0E716702004A0A50095E020 /* Resources */,
+				D3AD4C9B1C48674EC4F14223 /* [CP] Embed Pods Frameworks */,
+				594B927194565A826C1AFB0C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +323,7 @@
 				TargetAttributes = {
 					D0E716712004A0A50095E020 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					D0E716852004A0A50095E020 = {
@@ -232,6 +363,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D019B9D72004A695002852ED /* Auth.storyboard in Resources */,
+				D019B9E62004B290002852ED /* Connect.storyboard in Resources */,
 				D0E716802004A0A50095E020 /* LaunchScreen.storyboard in Resources */,
 				D0E7167D2004A0A50095E020 /* Assets.xcassets in Resources */,
 				D0E7167B2004A0A50095E020 /* Main.storyboard in Resources */,
@@ -254,13 +387,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		594B927194565A826C1AFB0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InfoRTC2/Pods-InfoRTC2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3AD4C9B1C48674EC4F14223 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InfoRTC2/Pods-InfoRTC2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InfoRTC2/Pods-InfoRTC2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E211162A60D0340E810C41A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfoRTC2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0E7166E2004A0A50095E020 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A8A6732005B38B00F8F9CF /* RTCManagerVC.swift in Sources */,
+				D019B9D22004A576002852ED /* Base.swift in Sources */,
+				D019B9E02004AC9C002852ED /* SendMessageModel.swift in Sources */,
+				D019B9E22004AD03002852ED /* SignInVC.swift in Sources */,
+				D019B9E42004B1E0002852ED /* SetProfileVC.swift in Sources */,
+				D019B9E92004B2DA002852ED /* EnterPhoneNumVC.swift in Sources */,
+				D0A1A68D200713FF007D8542 /* SocketManager.swift in Sources */,
+				D0A1A6EF200749A4007D8542 /* IceCandidateModel.swift in Sources */,
+				D08D9F482004B3F8002B59F2 /* MainConnectionVC.swift in Sources */,
+				D0A1A66C2006F111007D8542 /* RTCManagerPeerDelegate.swift in Sources */,
+				D09F09BE2005DF6000AA868A /* SDPModel.swift in Sources */,
 				D0E716782004A0A50095E020 /* ViewController.swift in Sources */,
 				D0E716762004A0A50095E020 /* AppDelegate.swift in Sources */,
+				D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */,
+				D019B9DE2004AC4E002852ED /* IceListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,14 +624,19 @@
 		};
 		D0E7169B2004A0A50095E020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D120FA7D053699B1327A012A /* Pods-InfoRTC2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3868KR87Z;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = root.InfoRTC2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,14 +644,18 @@
 		};
 		D0E7169C2004A0A50095E020 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E75515C87312BE9860A61F0 /* Pods-InfoRTC2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3868KR87Z;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = root.InfoRTC2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
