@@ -39,7 +39,7 @@ extension UIViewController{
         if !paramStr.isEmpty{ paramStr.removeLast() }
         
         var request: URLRequest? = nil
-        if method == "GET" || method == "PUT"{
+        if method == "GET" {
             request = URLRequest(url: URL(string: url + add + "?" +  paramStr)!)
         }else{
             request = URLRequest(url: URL(string: url + add)!)

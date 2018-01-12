@@ -8,20 +8,19 @@
 
 import Foundation
 
-struct IceListModel: Codable{
+struct IceServerModel: Codable{
     
     var status: String
     var message: String?
     var result: ResultModel?
     
     struct ResultModel: Codable {
-        
-        var ice_servers: Array<Url>
+        var ice_servers: Array<UrlModel>
     }
     
 }
 
-struct Url: Codable{
+struct UrlModel: Codable{
     var urls: Array<String>
     var credential: String?
     var username: String?

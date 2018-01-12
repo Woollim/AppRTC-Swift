@@ -25,12 +25,12 @@ class EnterPhoneNumVC: UIViewController {
                 if parseData.status == "ok"{
                     let serviceToken = (parseData.result?.webrtc.topic)!
                     let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MainConnectionView") as! MainConnectionVC
-                    nextVC.phoneNum = self.numberTextField.text!
+                    nextVC.vcid = "01022895997"
                     nextVC.serviceToken = serviceToken
                     self.present(nextVC, animated: true, completion: nil)
                 }else{
                     self.showToast(msg: "통화 실패")
-                    print(parseData.message)
+                    print(parseData.message!)
                 }
             })
         }

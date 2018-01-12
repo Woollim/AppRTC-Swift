@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct IceCandidateModel: Codable{
+struct ICEModel: Codable{
     
-    var vcid: String
     var cmd: String
+    var vcid: String
+    var candidate: String
     var sdpMid: String
     var sdpMLineIndex: Int
-    var candidate: String
     
 }

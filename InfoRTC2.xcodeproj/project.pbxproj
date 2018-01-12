@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4E1E210718D0CBB42487AB8D /* Pods_InfoRTC2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6250C8E1C30DD615BC3AD00F /* Pods_InfoRTC2.framework */; };
+		C32FB192200848CE0003ABA4 /* RTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB191200848CE0003ABA4 /* RTCClient.swift */; };
+		C32FB194200848E00003ABA4 /* SDPDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB193200848E00003ABA4 /* SDPDelegate.swift */; };
+		C32FB196200848EE0003ABA4 /* ICEDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB195200848EE0003ABA4 /* ICEDelegate.swift */; };
+		C32FB198200849060003ABA4 /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB197200849060003ABA4 /* SocketClient.swift */; };
+		C32FB19A2008509C0003ABA4 /* RTCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB1992008509C0003ABA4 /* RTCDelegate.swift */; };
 		D019B9D22004A576002852ED /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9D12004A576002852ED /* Base.swift */; };
 		D019B9D72004A695002852ED /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D019B9D62004A695002852ED /* Auth.storyboard */; };
 		D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DB2004ABE5002852ED /* AuthModel.swift */; };
-		D019B9DE2004AC4E002852ED /* IceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DD2004AC4E002852ED /* IceListModel.swift */; };
+		D019B9DE2004AC4E002852ED /* IceServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DD2004AC4E002852ED /* IceServerModel.swift */; };
 		D019B9E02004AC9C002852ED /* SendMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DF2004AC9C002852ED /* SendMessageModel.swift */; };
 		D019B9E22004AD03002852ED /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E12004AD03002852ED /* SignInVC.swift */; };
 		D019B9E42004B1E0002852ED /* SetProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E32004B1E0002852ED /* SetProfileVC.swift */; };
@@ -19,12 +24,8 @@
 		D019B9E92004B2DA002852ED /* EnterPhoneNumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E82004B2DA002852ED /* EnterPhoneNumVC.swift */; };
 		D08D9F482004B3F8002B59F2 /* MainConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */; };
 		D09F09BE2005DF6000AA868A /* SDPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F09BD2005DF6000AA868A /* SDPModel.swift */; };
-		D0A1A66C2006F111007D8542 /* RTCManagerPeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1A66B2006F111007D8542 /* RTCManagerPeerDelegate.swift */; };
-		D0A1A68D200713FF007D8542 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1A68C200713FF007D8542 /* SocketManager.swift */; };
-		D0A1A6EF200749A4007D8542 /* IceCandidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1A6EE200749A4007D8542 /* IceCandidateModel.swift */; };
-		D0A8A6732005B38B00F8F9CF /* RTCManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8A6722005B38B00F8F9CF /* RTCManagerVC.swift */; };
+		D0A1A6EF200749A4007D8542 /* ICEModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1A6EE200749A4007D8542 /* ICEModel.swift */; };
 		D0E716762004A0A50095E020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E716752004A0A50095E020 /* AppDelegate.swift */; };
-		D0E716782004A0A50095E020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E716772004A0A50095E020 /* ViewController.swift */; };
 		D0E7167B2004A0A50095E020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E716792004A0A50095E020 /* Main.storyboard */; };
 		D0E7167D2004A0A50095E020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E7167C2004A0A50095E020 /* Assets.xcassets */; };
 		D0E716802004A0A50095E020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E7167E2004A0A50095E020 /* LaunchScreen.storyboard */; };
@@ -52,10 +53,15 @@
 /* Begin PBXFileReference section */
 		2E75515C87312BE9860A61F0 /* Pods-InfoRTC2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfoRTC2.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfoRTC2/Pods-InfoRTC2.release.xcconfig"; sourceTree = "<group>"; };
 		6250C8E1C30DD615BC3AD00F /* Pods_InfoRTC2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfoRTC2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32FB191200848CE0003ABA4 /* RTCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCClient.swift; sourceTree = "<group>"; };
+		C32FB193200848E00003ABA4 /* SDPDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPDelegate.swift; sourceTree = "<group>"; };
+		C32FB195200848EE0003ABA4 /* ICEDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICEDelegate.swift; sourceTree = "<group>"; };
+		C32FB197200849060003ABA4 /* SocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
+		C32FB1992008509C0003ABA4 /* RTCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCDelegate.swift; sourceTree = "<group>"; };
 		D019B9D12004A576002852ED /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		D019B9D62004A695002852ED /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		D019B9DB2004ABE5002852ED /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
-		D019B9DD2004AC4E002852ED /* IceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceListModel.swift; sourceTree = "<group>"; };
+		D019B9DD2004AC4E002852ED /* IceServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceServerModel.swift; sourceTree = "<group>"; };
 		D019B9DF2004AC9C002852ED /* SendMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageModel.swift; sourceTree = "<group>"; };
 		D019B9E12004AD03002852ED /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		D019B9E32004B1E0002852ED /* SetProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProfileVC.swift; sourceTree = "<group>"; };
@@ -64,13 +70,9 @@
 		D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConnectionVC.swift; sourceTree = "<group>"; };
 		D09F09BD2005DF6000AA868A /* SDPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPModel.swift; sourceTree = "<group>"; };
 		D09F09BF2005F0AB00AA868A /* InfoRTC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfoRTC-Bridging-Header.h"; sourceTree = "<group>"; };
-		D0A1A66B2006F111007D8542 /* RTCManagerPeerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCManagerPeerDelegate.swift; sourceTree = "<group>"; };
-		D0A1A68C200713FF007D8542 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
-		D0A1A6EE200749A4007D8542 /* IceCandidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidateModel.swift; sourceTree = "<group>"; };
-		D0A8A6722005B38B00F8F9CF /* RTCManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCManagerVC.swift; sourceTree = "<group>"; };
+		D0A1A6EE200749A4007D8542 /* ICEModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICEModel.swift; sourceTree = "<group>"; };
 		D0E716722004A0A50095E020 /* InfoRTC2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoRTC2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E716752004A0A50095E020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0E716772004A0A50095E020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0E7167A2004A0A50095E020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0E7167C2004A0A50095E020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0E7167F2004A0A50095E020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,10 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				D019B9DB2004ABE5002852ED /* AuthModel.swift */,
-				D019B9DD2004AC4E002852ED /* IceListModel.swift */,
+				D019B9DD2004AC4E002852ED /* IceServerModel.swift */,
 				D019B9DF2004AC9C002852ED /* SendMessageModel.swift */,
 				D09F09BD2005DF6000AA868A /* SDPModel.swift */,
-				D0A1A6EE200749A4007D8542 /* IceCandidateModel.swift */,
+				D0A1A6EE200749A4007D8542 /* ICEModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,9 +188,11 @@
 		D0A8A6742005BD8000F8F9CF /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D0A8A6722005B38B00F8F9CF /* RTCManagerVC.swift */,
-				D0A1A66B2006F111007D8542 /* RTCManagerPeerDelegate.swift */,
-				D0A1A68C200713FF007D8542 /* SocketManager.swift */,
+				C32FB191200848CE0003ABA4 /* RTCClient.swift */,
+				C32FB1992008509C0003ABA4 /* RTCDelegate.swift */,
+				C32FB193200848E00003ABA4 /* SDPDelegate.swift */,
+				C32FB195200848EE0003ABA4 /* ICEDelegate.swift */,
+				C32FB197200849060003ABA4 /* SocketClient.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -225,7 +229,6 @@
 				D019B9D32004A673002852ED /* StoryBoard */,
 				D019B9D02004A569002852ED /* Base */,
 				D0E716752004A0A50095E020 /* AppDelegate.swift */,
-				D0E716772004A0A50095E020 /* ViewController.swift */,
 				D0E716792004A0A50095E020 /* Main.storyboard */,
 				D0E7167C2004A0A50095E020 /* Assets.xcassets */,
 				D0E7167E2004A0A50095E020 /* LaunchScreen.storyboard */,
@@ -446,21 +449,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A8A6732005B38B00F8F9CF /* RTCManagerVC.swift in Sources */,
 				D019B9D22004A576002852ED /* Base.swift in Sources */,
 				D019B9E02004AC9C002852ED /* SendMessageModel.swift in Sources */,
 				D019B9E22004AD03002852ED /* SignInVC.swift in Sources */,
+				C32FB192200848CE0003ABA4 /* RTCClient.swift in Sources */,
+				C32FB198200849060003ABA4 /* SocketClient.swift in Sources */,
 				D019B9E42004B1E0002852ED /* SetProfileVC.swift in Sources */,
+				C32FB196200848EE0003ABA4 /* ICEDelegate.swift in Sources */,
 				D019B9E92004B2DA002852ED /* EnterPhoneNumVC.swift in Sources */,
-				D0A1A68D200713FF007D8542 /* SocketManager.swift in Sources */,
-				D0A1A6EF200749A4007D8542 /* IceCandidateModel.swift in Sources */,
+				D0A1A6EF200749A4007D8542 /* ICEModel.swift in Sources */,
 				D08D9F482004B3F8002B59F2 /* MainConnectionVC.swift in Sources */,
-				D0A1A66C2006F111007D8542 /* RTCManagerPeerDelegate.swift in Sources */,
 				D09F09BE2005DF6000AA868A /* SDPModel.swift in Sources */,
-				D0E716782004A0A50095E020 /* ViewController.swift in Sources */,
 				D0E716762004A0A50095E020 /* AppDelegate.swift in Sources */,
 				D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */,
-				D019B9DE2004AC4E002852ED /* IceListModel.swift in Sources */,
+				C32FB194200848E00003ABA4 /* SDPDelegate.swift in Sources */,
+				C32FB19A2008509C0003ABA4 /* RTCDelegate.swift in Sources */,
+				D019B9DE2004AC4E002852ED /* IceServerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W3868KR87Z;
+				DEVELOPMENT_TEAM = 9KK62677LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -638,7 +642,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -649,7 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W3868KR87Z;
+				DEVELOPMENT_TEAM = 9KK62677LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -657,7 +661,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

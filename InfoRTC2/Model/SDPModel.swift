@@ -10,10 +10,10 @@ import Foundation
 
 struct SDPModel: Codable{
     
+    var cmd: String
+    var vcid: String
     var audio: Int
     var video: Int
-    var vcid: String
-    var cmd: String
     var sdpOffer: String?
     var sdpAnswer: String?
 
