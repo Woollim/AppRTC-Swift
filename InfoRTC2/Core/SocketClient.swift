@@ -14,17 +14,18 @@ class SocketClient{
     var client: SRWebSocket? = nil
     var vcid = ""
     
+    var timer: Timer? = nil
+    
     init(_ delegate: SRWebSocketDelegate, token: String, topic: String, vcid: String) {
         client = SRWebSocket.init(url: URL(string: "https://webrtc.mand.co.kr/service/ws/\(topic)?access_token=\(token)")!)
         client?.delegate = delegate
         self.vcid = vcid
         client?.open()
-        print("finish open")
     }
     
     func sendSDPMessage(_ sdpOffer: String){
         print("sendSDP")
-        let sendData = SDPModel.init(cmd: "invite-video-call-to", vcid: vcid, audio: 1, video: 1, sdpOffer: sdpOffer, sdpAnswer: nil)
+        let sendData = SDPModel.init(cmd: "invite-video-call-to", vcid: vcid, audio: 1, video: 1, sdpOffer: sdpOffer)
         let temp = try! JSONEncoder().encode(sendData)
         self.sendMessage(temp)
     }

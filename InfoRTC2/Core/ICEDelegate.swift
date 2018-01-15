@@ -11,17 +11,19 @@ import Foundation
 class ICEDelegate: NSObject, RTCPeerConnectionDelegate{
     
     var client: SocketClient? = nil
+    var remoteTrackFunc: ((RTCMediaStream) -> ())? = nil
     
     init(_ socket: SocketClient) {
         client = socket
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, signalingStateChanged stateChanged: RTCSignalingState) {
-        print("\(stateChanged)")
+        
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, addedStream stream: RTCMediaStream!) {
-        print("stream added")
+        print("set remote stream")
+        remoteTrackFunc?(stream)
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, removedStream stream: RTCMediaStream!) {
@@ -41,8 +43,7 @@ class ICEDelegate: NSObject, RTCPeerConnectionDelegate{
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, gotICECandidate candidate: RTCICECandidate!) {
-        print(candidate.description + candidate.sdp)
-        //client?.sendICEMessage(candidate: candidate.description, sdpMid: candidate.sdpMid, sdpMLineIndex: candidate.sdpMLineIndex)
+        client?.sendICEMessage(candidate: candidate.description, sdpMid: candidate.sdpMid, sdpMLineIndex: candidate.sdpMLineIndex)
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, didOpen dataChannel: RTCDataChannel!) {

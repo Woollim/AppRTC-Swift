@@ -14,7 +14,6 @@ struct SDPModel: Codable{
     var vcid: String
     var audio: Int
     var video: Int
-    var sdpOffer: String?
-    var sdpAnswer: String?
+    var sdpOffer: String
 
 }

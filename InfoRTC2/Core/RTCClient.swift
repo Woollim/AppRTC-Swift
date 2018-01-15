@@ -13,6 +13,7 @@ import SocketRocket
 class RTCClient: NSObject, SRWebSocketDelegate{
     
     var peerConn: RTCPeerConnection? = nil
+    let factory = RTCPeerConnectionFactory()
     
     var socket: SocketClient? = nil
     var sdpDelegate: SDPDelegate? = nil
@@ -21,6 +22,7 @@ class RTCClient: NSObject, SRWebSocketDelegate{
     var delegate: RTCDelegate? = nil
     
     var socketIsOpen = false
+    var timer: Timer? = nil
     
     init(_ delegate: RTCDelegate, token: String, topic: String, vcid: String) {
         super.init()
@@ -28,52 +30,73 @@ class RTCClient: NSObject, SRWebSocketDelegate{
         socket = SocketClient.init(self, token: token, topic: topic, vcid: vcid)
         sdpDelegate = SDPDelegate(socket!)
         iceDelegate = ICEDelegate(socket!)
+        iceDelegate?.remoteTrackFunc = setRemoteStream
     }
     
     func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
-        print(message)
+        let data = (message as! String).data(using: .utf8)!
+        do{
+            let sdpData = try JSONDecoder().decode(SocketSDPModel.self, from: data)
+            setSdp(sdpData.sdpAnswer)
+        }catch{
+            let iceData = try! JSONDecoder().decode(SocketICEModel.self, from: data).candidate
+            setICE(candidate: iceData.candidate, sdpMid: iceData.sdpMid, sdpMLineIndex: iceData.sdpMLineIndex)
+        }
+    }
+    
+    
+    func webSocket(_ webSocket: SRWebSocket!, didCloseWithCode code: Int, reason: String!, wasClean: Bool) {
+        print("close/" + reason)
     }
     
     func webSocketDidOpen(_ webSocket: SRWebSocket!) {
+        print("socket open")
         socketIsOpen = true
         if iceServerArr.count > 0 { startPeerConnection(iceServerArr) }
+//        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: {
+//            _ in
+//            print("ping")
+//            let data = SocketPingModel.init(cmd: "ping")
+//            let sendData = try! JSONEncoder().encode(data)
+//            print(String.init(data: sendData, encoding: .utf8))
+//            self.socket?.client?.send(sendData)
+//        })
     }
     
     var iceServerArr = Array<RTCICEServer>()
     
     func createIceServer(_ urlPack: Array<UrlModel>){
-        var sIceServerArr = Array<RTCICEServer>()
-        var tIceServerArr = Array<RTCICEServer>()
+        var tempIceServerArr = Array<RTCICEServer>()
         for urls in urlPack{
             for url in urls.urls{
                 let iceServer = RTCICEServer.init(uri: URL(string: url)!, username: urls.username != nil ? urls.username! : "", password: urls.credential != nil ? urls.credential! : "")
-                if url.hasPrefix("turn"){ tIceServerArr.append(iceServer!) }
-                else{ sIceServerArr.append(iceServer!) }
+                if !url.contains("["){ tempIceServerArr.append(iceServer!) }
             }
         }
-        iceServerArr = sIceServerArr
-        if socketIsOpen{ startPeerConnection(iceServerArr) }
+        iceServerArr = tempIceServerArr
     }
     
     func startPeerConnection(_ servers: Array<RTCICEServer>){
         RTCPeerConnectionFactory.initializeSSL()
-        let peerFactory = RTCPeerConnectionFactory()
-        peerConn = peerFactory.peerConnection(withICEServers: servers, constraints: getPeerConstraints(), delegate: iceDelegate)
-        guard let stream = createStream(peerFactory) else { return print("전면 카메라 없음") }
+        peerConn = factory.peerConnection(withICEServers: servers, constraints: getPeerConstraints(), delegate: iceDelegate)
+        guard let stream = createStream() else { return print("전면 카메라 없음") }
         peerConn?.add(stream)
         createOffer()
     }
     
-    func createStream(_ factory: RTCPeerConnectionFactory) -> RTCMediaStream?{
-        let localStream = factory.mediaStream(withLabel: "localStreamIB")
-        let audioTrack = factory.audioTrack(withID: "audioIB")
-        localStream?.addAudioTrack(audioTrack)
+    func createStream() -> RTCMediaStream?{
+        let localStream = factory.mediaStream(withLabel: "ARDAMS")
+        
         guard let deviceName = getVideoDevice() else { return nil }
         let videoCapturer = RTCVideoCapturer.init(deviceName: deviceName)
-        let videoSource = factory.videoSource(with: videoCapturer, constraints: nil)
-        let videoTrack = factory.videoTrack(withID: "videoIB", source: videoSource)
+        let videoSource = factory.videoSource(with: videoCapturer, constraints: getConstraints(main: nil, option: nil))
+        let videoTrack = factory.videoTrack(withID: "ARDAMSv0", source: videoSource)
         delegate?.getLocalTrack(videoTrack!)
+        
         localStream?.addVideoTrack(videoTrack)
+        let audioTrack = factory.audioTrack(withID: "ARDAMSa0")
+        localStream?.addAudioTrack(audioTrack)
+        
         return localStream!
     }
     
@@ -100,10 +123,29 @@ extension RTCClient{
     }
     
     //get video device
+    
     func getVideoDevice() -> String?{
         let videoDeviceArr = AVCaptureDevice.DiscoverySession.init(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .front)
         if videoDeviceArr.devices.count < 0 { return nil }
         else{ return videoDeviceArr.devices[0].localizedName }
+    }
+    
+    //set sdp, icecandidate
+    func setSdp(_ sdp: String){
+        let remoteSdp = RTCSessionDescription.init(type: "answer", sdp: sdp)
+        peerConn?.setRemoteDescriptionWith(nil, sessionDescription: remoteSdp)
+    }
+    
+    func setICE(candidate: String, sdpMid: String, sdpMLineIndex: Int){
+        let remoteCandidate = RTCICECandidate.init(mid: sdpMid, index: sdpMLineIndex, sdp: candidate)
+        peerConn?.add(remoteCandidate)
+    }
+    
+    //set remote track
+    func setRemoteStream(_ stream: RTCMediaStream){
+        DispatchQueue.main.async {
+            self.delegate?.getRemoteTrack(stream.videoTracks[0] as! RTCVideoTrack)
+        }
     }
     
 }

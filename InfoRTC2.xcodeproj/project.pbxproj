@@ -13,6 +13,9 @@
 		C32FB196200848EE0003ABA4 /* ICEDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB195200848EE0003ABA4 /* ICEDelegate.swift */; };
 		C32FB198200849060003ABA4 /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB197200849060003ABA4 /* SocketClient.swift */; };
 		C32FB19A2008509C0003ABA4 /* RTCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB1992008509C0003ABA4 /* RTCDelegate.swift */; };
+		C3437F3E200C385B004F228E /* SocketSDPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F3D200C385B004F228E /* SocketSDPModel.swift */; };
+		C3437F40200C3883004F228E /* SocketICEModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F3F200C3883004F228E /* SocketICEModel.swift */; };
+		C3437F42200C4995004F228E /* SocketPingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F41200C4995004F228E /* SocketPingModel.swift */; };
 		D019B9D22004A576002852ED /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9D12004A576002852ED /* Base.swift */; };
 		D019B9D72004A695002852ED /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D019B9D62004A695002852ED /* Auth.storyboard */; };
 		D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DB2004ABE5002852ED /* AuthModel.swift */; };
@@ -58,6 +61,9 @@
 		C32FB195200848EE0003ABA4 /* ICEDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICEDelegate.swift; sourceTree = "<group>"; };
 		C32FB197200849060003ABA4 /* SocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
 		C32FB1992008509C0003ABA4 /* RTCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCDelegate.swift; sourceTree = "<group>"; };
+		C3437F3D200C385B004F228E /* SocketSDPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketSDPModel.swift; sourceTree = "<group>"; };
+		C3437F3F200C3883004F228E /* SocketICEModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketICEModel.swift; sourceTree = "<group>"; };
+		C3437F41200C4995004F228E /* SocketPingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPingModel.swift; sourceTree = "<group>"; };
 		D019B9D12004A576002852ED /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		D019B9D62004A695002852ED /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		D019B9DB2004ABE5002852ED /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -172,6 +178,9 @@
 				D019B9DF2004AC9C002852ED /* SendMessageModel.swift */,
 				D09F09BD2005DF6000AA868A /* SDPModel.swift */,
 				D0A1A6EE200749A4007D8542 /* ICEModel.swift */,
+				C3437F3D200C385B004F228E /* SocketSDPModel.swift */,
+				C3437F3F200C3883004F228E /* SocketICEModel.swift */,
+				C3437F41200C4995004F228E /* SocketPingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -453,13 +462,16 @@
 				D019B9E02004AC9C002852ED /* SendMessageModel.swift in Sources */,
 				D019B9E22004AD03002852ED /* SignInVC.swift in Sources */,
 				C32FB192200848CE0003ABA4 /* RTCClient.swift in Sources */,
+				C3437F40200C3883004F228E /* SocketICEModel.swift in Sources */,
 				C32FB198200849060003ABA4 /* SocketClient.swift in Sources */,
 				D019B9E42004B1E0002852ED /* SetProfileVC.swift in Sources */,
+				C3437F42200C4995004F228E /* SocketPingModel.swift in Sources */,
 				C32FB196200848EE0003ABA4 /* ICEDelegate.swift in Sources */,
 				D019B9E92004B2DA002852ED /* EnterPhoneNumVC.swift in Sources */,
 				D0A1A6EF200749A4007D8542 /* ICEModel.swift in Sources */,
 				D08D9F482004B3F8002B59F2 /* MainConnectionVC.swift in Sources */,
 				D09F09BE2005DF6000AA868A /* SDPModel.swift in Sources */,
+				C3437F3E200C385B004F228E /* SocketSDPModel.swift in Sources */,
 				D0E716762004A0A50095E020 /* AppDelegate.swift in Sources */,
 				D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */,
 				C32FB194200848E00003ABA4 /* SDPDelegate.swift in Sources */,

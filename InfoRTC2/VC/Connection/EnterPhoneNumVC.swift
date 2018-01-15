@@ -19,11 +19,12 @@ class EnterPhoneNumVC: UIViewController {
         if !numberTextField.text!.isEmpty{
             showToast(msg: "번호를 입력하세요")
         }else{
-            connector(add: "/users/01022895997/call?mock=1", method: "POST", params: [:], fun: {
+            connector(add: "/users/01022895997/call", method: "POST", params: [:], fun: {
                 data in
                 let parseData = try! JSONDecoder().decode(SendMSGModel.self, from: data)
                 if parseData.status == "ok"{
                     let serviceToken = (parseData.result?.webrtc.topic)!
+                    print("url : " + parseData.message!)
                     let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MainConnectionView") as! MainConnectionVC
                     nextVC.vcid = "01022895997"
                     nextVC.serviceToken = serviceToken
