@@ -11,15 +11,18 @@ import UIKit
 class EnterPhoneNumVC: UIViewController {
 
     @IBOutlet weak var numberTextField: UITextField!
+    var selected = false
     
     override func viewDidLoad() {
     }
     
     @IBAction func calling(_ sender: Any) {
-        if !numberTextField.text!.isEmpty{
+        if numberTextField.text!.isEmpty{
             showToast(msg: "번호를 입력하세요")
         }else{
-            connector(add: "/users/01022895997/call", method: "POST", params: [:], fun: {
+            if selected{ return }
+            selected = true
+            connector(add: "/users/\(numberTextField.text!)/call", method: "POST", params: [:], fun: {
                 data in
                 let parseData = try! JSONDecoder().decode(SendMSGModel.self, from: data)
                 if parseData.status == "ok"{
@@ -30,6 +33,7 @@ class EnterPhoneNumVC: UIViewController {
                     nextVC.serviceToken = serviceToken
                     self.present(nextVC, animated: true, completion: nil)
                 }else{
+                    self.selected = false
                     self.showToast(msg: "통화 실패")
                     print(parseData.message!)
                 }

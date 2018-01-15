@@ -5,5 +5,7 @@ use_frameworks!
 target 'InfoRTC2' do
     pod 'libjingle_peerconnection'
     pod 'SocketRocket'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
 end
  

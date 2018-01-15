@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInVC: UIViewController {
 
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var button: UIButton!
+    
+    override func viewDidLoad() {
+        button.layer.cornerRadius = 8
+    }
     
     @IBAction func signIn(_ sender: Any) {
         if idTextField.text!.isEmpty || pwTextField.text!.isEmpty{
-            showToast(msg: "값을 입력하세요.")
+            showToast(msg: "값을 모두 입력하세요.")
         }else{
             connector(add: "/signin", method: "POST", params: ["login_id" : idTextField.text!, "password" : pwTextField.text!], fun: {
                 data in
@@ -26,13 +32,15 @@ class SignInVC: UIViewController {
                     self.pwTextField.text = ""
                 }else{
                     let userData = parseData.result!.service_user
-                    self.showToast(msg: "\(userData.user_name)님 환영합니다.")
                     self.saveToken(userData.access_token)
-                    let nextVC = UIStoryboard.init(name: "Connect", bundle: nil).instantiateViewController(withIdentifier: "EnterPhoneNumView") as! EnterPhoneNumVC
-                    self.present(nextVC, animated: true, completion: nil)
+                    self.showToast(msg: "\(userData.user_name!)님 환영합니다.", fun: self.goNext)
                 }
             })
         }
+    }
+    
+    func goNext(){
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

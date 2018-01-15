@@ -16,14 +16,16 @@
 		C3437F3E200C385B004F228E /* SocketSDPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F3D200C385B004F228E /* SocketSDPModel.swift */; };
 		C3437F40200C3883004F228E /* SocketICEModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F3F200C3883004F228E /* SocketICEModel.swift */; };
 		C3437F42200C4995004F228E /* SocketPingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F41200C4995004F228E /* SocketPingModel.swift */; };
+		C3437F48200C6462004F228E /* appLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3437F47200C6462004F228E /* appLogo.png */; };
+		C3437F4A200C6662004F228E /* comLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3437F49200C6662004F228E /* comLogo.png */; };
+		C3437F4C200C6E07004F228E /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F4B200C6E07004F228E /* UserInfoVC.swift */; };
+		C3437F4E200C7BD6004F228E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3437F4D200C7BD6004F228E /* GoogleService-Info.plist */; };
+		C3437F50200C8C86004F228E /* PrepareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F4F200C8C86004F228E /* PrepareVC.swift */; };
 		D019B9D22004A576002852ED /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9D12004A576002852ED /* Base.swift */; };
-		D019B9D72004A695002852ED /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D019B9D62004A695002852ED /* Auth.storyboard */; };
 		D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DB2004ABE5002852ED /* AuthModel.swift */; };
 		D019B9DE2004AC4E002852ED /* IceServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DD2004AC4E002852ED /* IceServerModel.swift */; };
 		D019B9E02004AC9C002852ED /* SendMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DF2004AC9C002852ED /* SendMessageModel.swift */; };
 		D019B9E22004AD03002852ED /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E12004AD03002852ED /* SignInVC.swift */; };
-		D019B9E42004B1E0002852ED /* SetProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E32004B1E0002852ED /* SetProfileVC.swift */; };
-		D019B9E62004B290002852ED /* Connect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D019B9E52004B290002852ED /* Connect.storyboard */; };
 		D019B9E92004B2DA002852ED /* EnterPhoneNumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9E82004B2DA002852ED /* EnterPhoneNumVC.swift */; };
 		D08D9F482004B3F8002B59F2 /* MainConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */; };
 		D09F09BE2005DF6000AA868A /* SDPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F09BD2005DF6000AA868A /* SDPModel.swift */; };
@@ -64,14 +66,17 @@
 		C3437F3D200C385B004F228E /* SocketSDPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketSDPModel.swift; sourceTree = "<group>"; };
 		C3437F3F200C3883004F228E /* SocketICEModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketICEModel.swift; sourceTree = "<group>"; };
 		C3437F41200C4995004F228E /* SocketPingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPingModel.swift; sourceTree = "<group>"; };
+		C3437F47200C6462004F228E /* appLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appLogo.png; sourceTree = "<group>"; };
+		C3437F49200C6662004F228E /* comLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comLogo.png; sourceTree = "<group>"; };
+		C3437F4B200C6E07004F228E /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		C3437F4D200C7BD6004F228E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3437F4F200C8C86004F228E /* PrepareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareVC.swift; sourceTree = "<group>"; };
+		C3EFD2FA200C9B9A00A81458 /* InfoRTC2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InfoRTC2.entitlements; sourceTree = "<group>"; };
 		D019B9D12004A576002852ED /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		D019B9D62004A695002852ED /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		D019B9DB2004ABE5002852ED /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		D019B9DD2004AC4E002852ED /* IceServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceServerModel.swift; sourceTree = "<group>"; };
 		D019B9DF2004AC9C002852ED /* SendMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageModel.swift; sourceTree = "<group>"; };
 		D019B9E12004AD03002852ED /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
-		D019B9E32004B1E0002852ED /* SetProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProfileVC.swift; sourceTree = "<group>"; };
-		D019B9E52004B290002852ED /* Connect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Connect.storyboard; sourceTree = "<group>"; };
 		D019B9E82004B2DA002852ED /* EnterPhoneNumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumVC.swift; sourceTree = "<group>"; };
 		D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConnectionVC.swift; sourceTree = "<group>"; };
 		D09F09BD2005DF6000AA868A /* SDPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPModel.swift; sourceTree = "<group>"; };
@@ -135,6 +140,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C3437F43200C6433004F228E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C3437F44200C644A004F228E /* Icon */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		C3437F44200C644A004F228E /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				C3437F49200C6662004F228E /* comLogo.png */,
+				C3437F47200C6462004F228E /* appLogo.png */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
 		D019B9D02004A569002852ED /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,20 +165,12 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		D019B9D32004A673002852ED /* StoryBoard */ = {
-			isa = PBXGroup;
-			children = (
-				D019B9D62004A695002852ED /* Auth.storyboard */,
-				D019B9E52004B290002852ED /* Connect.storyboard */,
-			);
-			path = StoryBoard;
-			sourceTree = "<group>";
-		};
 		D019B9D42004A67C002852ED /* VC */ = {
 			isa = PBXGroup;
 			children = (
 				D019B9E72004B2C3002852ED /* Connection */,
 				D019B9D52004A689002852ED /* Auth */,
+				C3437F4F200C8C86004F228E /* PrepareVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -165,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				D019B9E12004AD03002852ED /* SignInVC.swift */,
-				D019B9E32004B1E0002852ED /* SetProfileVC.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 			children = (
 				D019B9E82004B2DA002852ED /* EnterPhoneNumVC.swift */,
 				D08D9F472004B3F8002B59F2 /* MainConnectionVC.swift */,
+				C3437F4B200C6E07004F228E /* UserInfoVC.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -231,14 +245,16 @@
 		D0E716742004A0A50095E020 /* InfoRTC2 */ = {
 			isa = PBXGroup;
 			children = (
-				D09F09BF2005F0AB00AA868A /* InfoRTC-Bridging-Header.h */,
+				C3EFD2FA200C9B9A00A81458 /* InfoRTC2.entitlements */,
+				C3437F4D200C7BD6004F228E /* GoogleService-Info.plist */,
+				D0E716752004A0A50095E020 /* AppDelegate.swift */,
+				C3437F43200C6433004F228E /* Image */,
 				D0A8A6742005BD8000F8F9CF /* Core */,
 				D019B9D82004A99B002852ED /* Model */,
 				D019B9D42004A67C002852ED /* VC */,
-				D019B9D32004A673002852ED /* StoryBoard */,
-				D019B9D02004A569002852ED /* Base */,
-				D0E716752004A0A50095E020 /* AppDelegate.swift */,
 				D0E716792004A0A50095E020 /* Main.storyboard */,
+				D019B9D02004A569002852ED /* Base */,
+				D09F09BF2005F0AB00AA868A /* InfoRTC-Bridging-Header.h */,
 				D0E7167C2004A0A50095E020 /* Assets.xcassets */,
 				D0E7167E2004A0A50095E020 /* LaunchScreen.storyboard */,
 				D0E716812004A0A50095E020 /* Info.plist */,
@@ -337,6 +353,14 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D0E716852004A0A50095E020 = {
 						CreatedOnToolsVersion = 9.2;
@@ -375,11 +399,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D019B9D72004A695002852ED /* Auth.storyboard in Resources */,
-				D019B9E62004B290002852ED /* Connect.storyboard in Resources */,
 				D0E716802004A0A50095E020 /* LaunchScreen.storyboard in Resources */,
 				D0E7167D2004A0A50095E020 /* Assets.xcassets in Resources */,
+				C3437F48200C6462004F228E /* appLogo.png in Resources */,
 				D0E7167B2004A0A50095E020 /* Main.storyboard in Resources */,
+				C3437F4A200C6662004F228E /* comLogo.png in Resources */,
+				C3437F4E200C7BD6004F228E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,11 +447,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-InfoRTC2/Pods-InfoRTC2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,14 +495,15 @@
 				C32FB192200848CE0003ABA4 /* RTCClient.swift in Sources */,
 				C3437F40200C3883004F228E /* SocketICEModel.swift in Sources */,
 				C32FB198200849060003ABA4 /* SocketClient.swift in Sources */,
-				D019B9E42004B1E0002852ED /* SetProfileVC.swift in Sources */,
 				C3437F42200C4995004F228E /* SocketPingModel.swift in Sources */,
 				C32FB196200848EE0003ABA4 /* ICEDelegate.swift in Sources */,
 				D019B9E92004B2DA002852ED /* EnterPhoneNumVC.swift in Sources */,
 				D0A1A6EF200749A4007D8542 /* ICEModel.swift in Sources */,
+				C3437F50200C8C86004F228E /* PrepareVC.swift in Sources */,
 				D08D9F482004B3F8002B59F2 /* MainConnectionVC.swift in Sources */,
 				D09F09BE2005DF6000AA868A /* SDPModel.swift in Sources */,
 				C3437F3E200C385B004F228E /* SocketSDPModel.swift in Sources */,
+				C3437F4C200C6E07004F228E /* UserInfoVC.swift in Sources */,
 				D0E716762004A0A50095E020 /* AppDelegate.swift in Sources */,
 				D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */,
 				C32FB194200848E00003ABA4 /* SDPDelegate.swift in Sources */,
@@ -644,12 +676,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = InfoRTC2/InfoRTC2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KK62677LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = root.InfoRTC2;
+				PRODUCT_BUNDLE_IDENTIFIER = ib.AppRTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -664,12 +698,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = InfoRTC2/InfoRTC2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KK62677LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = root.InfoRTC2;
+				PRODUCT_BUNDLE_IDENTIFIER = ib.AppRTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
