@@ -18,14 +18,12 @@ class SDPDelegate: NSObject, RTCSessionDescriptionDelegate{
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, didCreateSessionDescription sdp: RTCSessionDescription!, error: Error!) {
         peerConnection.setLocalDescriptionWith(self, sessionDescription: sdp)
-        print(error)
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, didSetSessionDescriptionWithError error: Error!) {
         if peerConnection.signalingState == RTCSignalingHaveLocalOffer{
             client?.sendSDPMessage(peerConnection.localDescription.description)
         }
-        print(error)
     }
     
 }

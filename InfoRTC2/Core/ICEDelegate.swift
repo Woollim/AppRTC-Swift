@@ -12,6 +12,7 @@ class ICEDelegate: NSObject, RTCPeerConnectionDelegate{
     
     var client: SocketClient? = nil
     var remoteTrackFunc: ((RTCMediaStream) -> ())? = nil
+    var remoteMedia: RTCMediaStream? = nil
     
     init(_ socket: SocketClient) {
         client = socket
@@ -23,6 +24,7 @@ class ICEDelegate: NSObject, RTCPeerConnectionDelegate{
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, addedStream stream: RTCMediaStream!) {
         print("set remote stream")
+        remoteMedia = stream
         remoteTrackFunc?(stream)
     }
     
@@ -35,11 +37,22 @@ class ICEDelegate: NSObject, RTCPeerConnectionDelegate{
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, iceConnectionChanged newState: RTCICEConnectionState) {
-        
+        switch newState {
+        case RTCICEConnectionNew: print("new connection")
+        case RTCICEConnectionChecking: print("checking")
+        case RTCICEConnectionConnected: print("connected")
+        case RTCICEConnectionCompleted: print("completed")
+            print(remoteMedia?.videoTracks[0])
+        case RTCICEConnectionFailed: print("connection failed")
+        case RTCICEConnectionDisconnected: print("disconnected")
+        case RTCICEConnectionClosed: print("close")
+        case RTCICEConnectionMax: print("max room")
+        default: print("else")
+        }
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, iceGatheringChanged newState: RTCICEGatheringState) {
-        
+        print("gathering connection change")
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection!, gotICECandidate candidate: RTCICECandidate!) {

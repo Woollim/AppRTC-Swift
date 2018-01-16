@@ -13,13 +13,14 @@
 		C32FB196200848EE0003ABA4 /* ICEDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB195200848EE0003ABA4 /* ICEDelegate.swift */; };
 		C32FB198200849060003ABA4 /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB197200849060003ABA4 /* SocketClient.swift */; };
 		C32FB19A2008509C0003ABA4 /* RTCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FB1992008509C0003ABA4 /* RTCDelegate.swift */; };
+		C336E4AE200DC55A007D7D05 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F5534200D894D0004ED6A /* UserNotifications.framework */; };
+		C336E4B3200DEC88007D7D05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C336E4B2200DEC88007D7D05 /* GoogleService-Info.plist */; };
 		C3437F3E200C385B004F228E /* SocketSDPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F3D200C385B004F228E /* SocketSDPModel.swift */; };
 		C3437F40200C3883004F228E /* SocketICEModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F3F200C3883004F228E /* SocketICEModel.swift */; };
 		C3437F42200C4995004F228E /* SocketPingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F41200C4995004F228E /* SocketPingModel.swift */; };
 		C3437F48200C6462004F228E /* appLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3437F47200C6462004F228E /* appLogo.png */; };
 		C3437F4A200C6662004F228E /* comLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3437F49200C6662004F228E /* comLogo.png */; };
 		C3437F4C200C6E07004F228E /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F4B200C6E07004F228E /* UserInfoVC.swift */; };
-		C3437F4E200C7BD6004F228E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3437F4D200C7BD6004F228E /* GoogleService-Info.plist */; };
 		C3437F50200C8C86004F228E /* PrepareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3437F4F200C8C86004F228E /* PrepareVC.swift */; };
 		D019B9D22004A576002852ED /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9D12004A576002852ED /* Base.swift */; };
 		D019B9DC2004ABE5002852ED /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019B9DB2004ABE5002852ED /* AuthModel.swift */; };
@@ -63,15 +64,16 @@
 		C32FB195200848EE0003ABA4 /* ICEDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICEDelegate.swift; sourceTree = "<group>"; };
 		C32FB197200849060003ABA4 /* SocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
 		C32FB1992008509C0003ABA4 /* RTCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCDelegate.swift; sourceTree = "<group>"; };
+		C336E4B1200DE04D007D7D05 /* InfoRTC2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InfoRTC2.entitlements; sourceTree = "<group>"; };
+		C336E4B2200DEC88007D7D05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C33F5534200D894D0004ED6A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		C3437F3D200C385B004F228E /* SocketSDPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketSDPModel.swift; sourceTree = "<group>"; };
 		C3437F3F200C3883004F228E /* SocketICEModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketICEModel.swift; sourceTree = "<group>"; };
 		C3437F41200C4995004F228E /* SocketPingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPingModel.swift; sourceTree = "<group>"; };
 		C3437F47200C6462004F228E /* appLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appLogo.png; sourceTree = "<group>"; };
 		C3437F49200C6662004F228E /* comLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comLogo.png; sourceTree = "<group>"; };
 		C3437F4B200C6E07004F228E /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
-		C3437F4D200C7BD6004F228E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3437F4F200C8C86004F228E /* PrepareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareVC.swift; sourceTree = "<group>"; };
-		C3EFD2FA200C9B9A00A81458 /* InfoRTC2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InfoRTC2.entitlements; sourceTree = "<group>"; };
 		D019B9D12004A576002852ED /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		D019B9DB2004ABE5002852ED /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		D019B9DD2004AC4E002852ED /* IceServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceServerModel.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C336E4AE200DC55A007D7D05 /* UserNotifications.framework in Frameworks */,
 				4E1E210718D0CBB42487AB8D /* Pods_InfoRTC2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +138,7 @@
 		AFC8B0CC028F8699CE0FD36E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C33F5534200D894D0004ED6A /* UserNotifications.framework */,
 				6250C8E1C30DD615BC3AD00F /* Pods_InfoRTC2.framework */,
 			);
 			name = Frameworks;
@@ -223,6 +227,7 @@
 		D0E716692004A0A50095E020 = {
 			isa = PBXGroup;
 			children = (
+				C336E4B2200DEC88007D7D05 /* GoogleService-Info.plist */,
 				D0E716742004A0A50095E020 /* InfoRTC2 */,
 				D0E716892004A0A50095E020 /* InfoRTC2Tests */,
 				D0E716942004A0A50095E020 /* InfoRTC2UITests */,
@@ -245,8 +250,7 @@
 		D0E716742004A0A50095E020 /* InfoRTC2 */ = {
 			isa = PBXGroup;
 			children = (
-				C3EFD2FA200C9B9A00A81458 /* InfoRTC2.entitlements */,
-				C3437F4D200C7BD6004F228E /* GoogleService-Info.plist */,
+				C336E4B1200DE04D007D7D05 /* InfoRTC2.entitlements */,
 				D0E716752004A0A50095E020 /* AppDelegate.swift */,
 				C3437F43200C6433004F228E /* Image */,
 				D0A8A6742005BD8000F8F9CF /* Core */,
@@ -352,7 +356,7 @@
 					D0E716712004A0A50095E020 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -404,7 +408,7 @@
 				C3437F48200C6462004F228E /* appLogo.png in Resources */,
 				D0E7167B2004A0A50095E020 /* Main.storyboard in Resources */,
 				C3437F4A200C6662004F228E /* comLogo.png in Resources */,
-				C3437F4E200C7BD6004F228E /* GoogleService-Info.plist in Resources */,
+				C336E4B3200DEC88007D7D05 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,14 +681,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = InfoRTC2/InfoRTC2.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9KK62677LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ib.AppRTC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infobank.iOS.RTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ff89bb05-5485-479f-9481-31fd73558964";
+				PROVISIONING_PROFILE_SPECIFIER = iOSRTC;
 				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -699,14 +706,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = InfoRTC2/InfoRTC2.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9KK62677LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InfoRTC2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ib.AppRTC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infobank.iOS.RTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ff89bb05-5485-479f-9481-31fd73558964";
+				PROVISIONING_PROFILE_SPECIFIER = iOSRTC;
 				SWIFT_OBJC_BRIDGING_HEADER = "InfoRTC2/InfoRTC-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

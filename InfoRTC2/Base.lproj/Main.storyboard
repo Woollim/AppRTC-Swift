@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yrs-Vw-geR">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,15 +16,15 @@
             <objects>
                 <tableViewController id="LMv-As-vnD" customClass="UserInfoVC" customModule="InfoRTC2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RbO-Ip-TOf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInfoCell" rowHeight="108" id="Q3U-VC-PjQ" customClass="UserInfoCell" customModule="InfoRTC2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="108"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q3U-VC-PjQ" id="UAx-aZ-ghV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="107.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-Pi-nod">
@@ -51,7 +51,7 @@
                                             </subviews>
                                         </stackView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RWs-T9-cwv">
-                                            <rect key="frame" x="295" y="22.5" width="64" height="64"/>
+                                            <rect key="frame" x="240" y="22.5" width="64" height="64"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="64" id="V9V-bI-XZ4"/>
                                                 <constraint firstAttribute="width" constant="64" id="inj-fB-cMe"/>
@@ -65,6 +65,9 @@
                                         <constraint firstItem="RWs-T9-cwv" firstAttribute="centerY" secondItem="UAx-aZ-ghV" secondAttribute="centerY" id="Hkb-xQ-v4a"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="numLabel" destination="jfC-js-5sw" id="L8E-LS-ZAl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -78,7 +81,11 @@
                                 <action selector="logout:" destination="LMv-As-vnD" id="nUY-np-UmK"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5yX-iO-HRO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5yX-iO-HRO">
+                            <connections>
+                                <action selector="add" destination="LMv-As-vnD" id="5oI-cw-PZe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOz-SH-LR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,25 +97,34 @@
             <objects>
                 <viewController storyboardIdentifier="MainConnectionView" id="YIG-pE-969" customClass="MainConnectionVC" customModule="InfoRTC2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXv-MK-QxH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUY-DR-7cU" customClass="RTCEAGLVideoView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="323.5"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="274"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovI-cC-FRq" customClass="RTCEAGLVideoView">
-                                <rect key="frame" x="0.0" y="343.5" width="375" height="323.5"/>
+                                <rect key="frame" x="0.0" y="294" width="320" height="274"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-f0-odn">
+                                <rect key="frame" x="278" y="538" width="42" height="30"/>
+                                <state key="normal" title="SWAP"/>
+                                <connections>
+                                    <action selector="swap:" destination="YIG-pE-969" eventType="touchUpInside" id="ggb-ke-u0t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hUY-DR-7cU" firstAttribute="leading" secondItem="voa-AZ-SVJ" secondAttribute="leading" id="8MT-DV-jfK"/>
+                            <constraint firstItem="voa-AZ-SVJ" firstAttribute="bottom" secondItem="cYk-f0-odn" secondAttribute="bottom" id="GHA-j9-M54"/>
                             <constraint firstItem="voa-AZ-SVJ" firstAttribute="trailing" secondItem="ovI-cC-FRq" secondAttribute="trailing" id="Y61-f5-sdZ"/>
                             <constraint firstItem="ovI-cC-FRq" firstAttribute="leading" secondItem="voa-AZ-SVJ" secondAttribute="leading" id="blv-we-x59"/>
                             <constraint firstItem="ovI-cC-FRq" firstAttribute="height" secondItem="hUY-DR-7cU" secondAttribute="height" id="dFc-p3-jty"/>
                             <constraint firstItem="hUY-DR-7cU" firstAttribute="top" secondItem="voa-AZ-SVJ" secondAttribute="top" id="pzz-AB-cbF"/>
+                            <constraint firstItem="voa-AZ-SVJ" firstAttribute="trailing" secondItem="cYk-f0-odn" secondAttribute="trailing" id="vVP-Wc-Src"/>
                             <constraint firstItem="ovI-cC-FRq" firstAttribute="top" secondItem="hUY-DR-7cU" secondAttribute="bottom" id="vp5-HZ-UaD"/>
                             <constraint firstItem="voa-AZ-SVJ" firstAttribute="trailing" secondItem="hUY-DR-7cU" secondAttribute="trailing" id="yBG-EL-tma"/>
                             <constraint firstItem="voa-AZ-SVJ" firstAttribute="bottom" secondItem="ovI-cC-FRq" secondAttribute="bottom" id="zyN-jR-BCx"/>
@@ -122,14 +138,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcH-CJ-jK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="124"/>
+            <point key="canvasLocation" x="1487" y="124"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="6zs-CF-Qnq">
             <objects>
                 <viewController storyboardIdentifier="SignInView" id="bFa-ek-DKj" customClass="SignInVC" customModule="InfoRTC2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SVw-KK-MO8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xRu-cK-hua">
@@ -146,19 +162,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-Sq-l2J">
-                                <rect key="frame" x="16" y="258.5" width="343" height="86"/>
+                                <rect key="frame" x="16" y="209" width="288" height="86"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eei-1Q-FpY">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="29"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-TQ-RfN">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="24"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uL-Ih-bIJ">
-                                                <rect key="frame" x="0.0" y="28" width="343" height="1"/>
+                                                <rect key="frame" x="0.0" y="28" width="288" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Q6g-vE-i1Z"/>
@@ -171,16 +187,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="msS-fo-iem">
-                                        <rect key="frame" x="0.0" y="57" width="343" height="29"/>
+                                        <rect key="frame" x="0.0" y="57" width="288" height="29"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9Ly-Dm-4QW">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="24"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-tZ-TEx">
-                                                <rect key="frame" x="0.0" y="28" width="343" height="1"/>
+                                                <rect key="frame" x="0.0" y="28" width="288" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="sJZ-MU-24N"/>
@@ -195,7 +211,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RK-dY-gtV">
-                                <rect key="frame" x="123.5" y="493" width="128" height="46"/>
+                                <rect key="frame" x="96" y="394" width="128" height="46"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="EXy-E4-S8m"/>
@@ -241,7 +257,7 @@
                 <navigationController storyboardIdentifier="UserInfoView" automaticallyAdjustsScrollViewInsets="NO" id="exy-aH-GcF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n3y-BP-ohF">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -258,11 +274,11 @@
             <objects>
                 <viewController id="yrs-Vw-geR" customClass="PrepareVC" customModule="InfoRTC2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAe-SY-6Ua">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="8YY-Ru-dGh">
-                                <rect key="frame" x="123.5" y="210.5" width="128" height="198.5"/>
+                                <rect key="frame" x="96" y="161" width="128" height="198.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-nB-0Dg">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -280,7 +296,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="A0a-54-9U4">
-                                <rect key="frame" x="239" y="633" width="128" height="26"/>
+                                <rect key="frame" x="184" y="534" width="128" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="asw-Cr-cy0"/>
                                     <constraint firstAttribute="width" constant="128" id="zSl-5v-LeP"/>

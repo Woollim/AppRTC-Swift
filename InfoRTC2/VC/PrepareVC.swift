@@ -12,6 +12,7 @@ import Firebase
 class PrepareVC: UIViewController {
 
     override func viewDidLoad() {
+        print(Messaging.messaging().fcmToken)
     }
     
     override func viewDidAppear(_ animated: Bool) {

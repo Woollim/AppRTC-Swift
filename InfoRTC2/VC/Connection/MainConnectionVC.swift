@@ -15,6 +15,10 @@ class MainConnectionVC: UIViewController {
     @IBOutlet weak var remoteView: RTCEAGLVideoView!
     @IBOutlet weak var localView: RTCEAGLVideoView!
     
+    @IBAction func swap(_ sender: Any) {
+        client?.swap()
+    }
+    
     var localTrack: RTCVideoTrack? = nil
     var remoteTrack: RTCVideoTrack? = nil
     

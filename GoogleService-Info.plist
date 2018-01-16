@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>281727060519-ua1377iu84i1p40ksv7mij2vde1btvqd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.281727060519-ua1377iu84i1p40ksv7mij2vde1btvqd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCYYzPeSaoZT_dS5m1-1F57zH2qM20MR3k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>281727060519</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.infobank.iOS.RTC</string>
+	<key>PROJECT_ID</key>
+	<string>toby-ac88d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>toby-ac88d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:281727060519:ios:279aeb246286b4da</string>
+	<key>DATABASE_URL</key>
+	<string>https://toby-ac88d.firebaseio.com</string>
+</dict>
+</plist>

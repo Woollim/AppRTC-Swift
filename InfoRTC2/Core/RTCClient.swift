@@ -12,6 +12,7 @@ import SocketRocket
 
 class RTCClient: NSObject, SRWebSocketDelegate{
     
+    var position: AVCaptureDevice.Position = .front
     var peerConn: RTCPeerConnection? = nil
     let factory = RTCPeerConnectionFactory()
     
@@ -53,14 +54,6 @@ class RTCClient: NSObject, SRWebSocketDelegate{
         print("socket open")
         socketIsOpen = true
         if iceServerArr.count > 0 { startPeerConnection(iceServerArr) }
-//        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: {
-//            _ in
-//            print("ping")
-//            let data = SocketPingModel.init(cmd: "ping")
-//            let sendData = try! JSONEncoder().encode(data)
-//            print(String.init(data: sendData, encoding: .utf8))
-//            self.socket?.client?.send(sendData)
-//        })
     }
     
     var iceServerArr = Array<RTCICEServer>()
@@ -79,21 +72,18 @@ class RTCClient: NSObject, SRWebSocketDelegate{
     func startPeerConnection(_ servers: Array<RTCICEServer>){
         RTCPeerConnectionFactory.initializeSSL()
         peerConn = factory.peerConnection(withICEServers: servers, constraints: getPeerConstraints(), delegate: iceDelegate)
-        guard let stream = createStream() else { return print("전면 카메라 없음") }
+        let stream = createStream()
         peerConn?.add(stream)
         createOffer()
     }
     
-    func createStream() -> RTCMediaStream?{
+    func createStream() -> RTCMediaStream{
         let localStream = factory.mediaStream(withLabel: "ARDAMS")
         
-        guard let deviceName = getVideoDevice() else { return nil }
-        let videoCapturer = RTCVideoCapturer.init(deviceName: deviceName)
-        let videoSource = factory.videoSource(with: videoCapturer, constraints: getConstraints(main: nil, option: nil))
-        let videoTrack = factory.videoTrack(withID: "ARDAMSv0", source: videoSource)
-        delegate?.getLocalTrack(videoTrack!)
-        
+        let videoTrack = getVideoTrack(getVideoDevice(position))
+        delegate?.getLocalTrack(videoTrack)
         localStream?.addVideoTrack(videoTrack)
+        
         let audioTrack = factory.audioTrack(withID: "ARDAMSa0")
         localStream?.addAudioTrack(audioTrack)
         
@@ -123,11 +113,17 @@ extension RTCClient{
     }
     
     //get video device
+    func getVideoTrack(_ device: String) -> RTCVideoTrack{
+        let videoCapturer = RTCVideoCapturer.init(deviceName: device)
+        let videoSource = factory.videoSource(with: videoCapturer, constraints: getConstraints(main: nil, option: nil))
+        return factory.videoTrack(withID: "ARDAMSv0", source: videoSource)!
+    }
     
-    func getVideoDevice() -> String?{
-        let videoDeviceArr = AVCaptureDevice.DiscoverySession.init(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .front)
-        if videoDeviceArr.devices.count < 0 { return nil }
-        else{ return videoDeviceArr.devices[0].localizedName }
+    func getVideoDevice(_ position: AVCaptureDevice.Position) -> String{
+        if position == .back{ self.position = .front }
+        else{ self.position = .back }
+        let videoDeviceArr = AVCaptureDevice.DiscoverySession.init(deviceTypes: [.builtInWideAngleCamera, .builtInDualCamera], mediaType: .video, position: position)
+        return videoDeviceArr.devices[0].localizedName
     }
     
     //set sdp, icecandidate
@@ -148,4 +144,14 @@ extension RTCClient{
         }
     }
     
+    func swap(){
+        let localStream = peerConn?.localStreams[0] as! RTCMediaStream
+        localStream.removeVideoTrack(localStream.videoTracks[0] as! RTCVideoTrack)
+        let videoTrack = getVideoTrack(getVideoDevice(position))
+        localStream.addVideoTrack(videoTrack)
+        delegate?.getLocalTrack(videoTrack)
+        peerConn?.remove(localStream)
+        peerConn?.add(localStream)
+    }
+
 }

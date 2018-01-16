@@ -10,7 +10,7 @@ import UIKit
 
 class UserInfoVC: UITableViewController {
 
-    var arr = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8]
+    var arr = Array<String>()
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 108
@@ -26,11 +26,12 @@ class UserInfoVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        goNext("01022895997")
+        goNext(arr[indexPath.row])
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as! UserInfoCell
+        cell.numLabel.text = arr[indexPath.row]
         return cell
     }
 
@@ -38,13 +39,11 @@ class UserInfoVC: UITableViewController {
         if editingStyle == .delete {
             arr.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            
         }
     }
     
     func goNext(_ num: String){
-        connector(add: "/users/\(num)/call", method: "POST", params: [:], fun: {
+        connector(add: "/users/\(num)/call?mock=1", method: "POST", params: [:], fun: {
             data in
             let parseData = try! JSONDecoder().decode(SendMSGModel.self, from: data)
             if parseData.status == "ok"{
@@ -56,9 +55,35 @@ class UserInfoVC: UITableViewController {
             }
         })
     }
+    
+    
 
+}
+
+extension UserInfoVC{
+    
+    @IBAction func add(){
+        let alert = UIAlertController.init(title: "사용자 추가", message: nil, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        let textField = alert.textFields![0]
+        textField.keyboardType = .numberPad
+        alert.addAction(UIAlertAction.init(title: "추가", style: .default, handler: {
+            _ in
+            let textField = alert.textFields![0]
+            if textField.text!.isEmpty{ self.showToast(msg: "번호를 입력하세요") }
+            else {
+                self.arr.append(textField.text!)
+                self.tableView.reloadData()
+            }
+        }))
+        alert.addAction(UIAlertAction.init(title: "취소", style: .destructive, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 class UserInfoCell: UITableViewCell{
 
+    @IBOutlet weak var numLabel: UILabel!
+    
 }
